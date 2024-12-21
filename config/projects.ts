@@ -24,21 +24,21 @@ export const projects: Project[] = [
     size: "large",
   },
   {
-    id: "Navacharan",
-    title: "Navacharan",
-    description: "Traditional LMS on steroids powered by AI (Hackathon Project)",
+    id: "Prompt-Archive",
+    title: "Prompt-Archive",
+    description: "A project to make it easy to find writing prompts",
     longDescription: `
-      An AI powered Learning Management System:
-      • Introducing ranks and Star based system to lms
-      • Students chat and communication
-      • File sharing and attachments
-      • Progress tracking and reporting
-      • Integration with AI to create a Study Buddy that helps when stuck
+      Features:
+      • Search Prompts: Find prompts by tags (e.g., fitness, creative) or by content keywords.
+      • Write Your Own Prompts: Add custom prompts directly from the app.
+      • Import/Export Prompts: Save your prompts in a JSON file for easy backup and sharing. Import JSON files to restore or share your collection.
+      • Multi-Model Support: Prompts tailored for ChatGPT, Claude, Gemini, and Llama.
     `,
-    technologies: ["React.js", "SCSS", "MySQL", "Django", "OpenAI API"],
-    image: "./lmsadmin.jpg",
-    githubUrl: "https://github.com/Ayush001122/lms-github.git",
+    technologies: ["React.js", "Vite","TailwindCSS", "vercel"],
+    image: "./Prompt-Archive.png",
+    githubUrl: "https://github.com/bhaveshsinghal95182/Prompt-Archive.git",
     size: "small",
+    liveUrl: "https://prompt-archive.vercel.app/",
   },
   {
     id: "Sticky-Notes",
