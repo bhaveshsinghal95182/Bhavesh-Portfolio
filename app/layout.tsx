@@ -57,8 +57,11 @@ export const metadata: Metadata = {
     title: "Bhavesh Singhal",
   },
   applicationName: "Bhavesh Singhal Portfolio",
-  themeColor: "#ffffff",
-  viewport: "width=device-width, initial-scale=1.0",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
 };
 
 export default function RootLayout({
@@ -68,6 +71,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className={`${inter.className} dark`}>
         <ThemeProvider
           attribute="class"
