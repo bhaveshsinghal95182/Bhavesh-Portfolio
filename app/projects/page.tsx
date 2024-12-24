@@ -1,36 +1,52 @@
 "use client";
 
 import { useState } from "react";
-import { ProjectCard } from "@/components/projects/project-card";
 import { ProjectDialog } from "@/components/projects/project-dialog";
+import { BentoGrid } from "@/components/projects/bento-grid";
+import { ProjectTimeline } from "@/components/projects/project-timeline";
 import { BackButton } from "@/components/ui/back-button";
 import { projects } from "@/config/projects";
+import { timelineEvents } from "@/config/timeline";
 import { Project } from "@/types/project";
+import { TimelineEvent } from "@/types/timeline";
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const handleTimelineEventClick = (event: TimelineEvent) => {
+    if (event.type === "project" && event.projectId) {
+      const project = projects.find((p) => p.id === event.projectId);
+      if (project) {
+        setSelectedProject(project);
+      }
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background pt-24 pb-16">
       <div className="container px-4">
         <BackButton />
-        <h1 className="text-4xl font-bold mb-8">All Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onClick={() => setSelectedProject(project)}
-            />
-          ))}
-        </div>
-      </div>
+        <h1 className="text-4xl font-bold mb-12">Projects</h1>
 
-      <ProjectDialog
-        project={selectedProject}
-        isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+        <section>
+          <h2 className="text-2xl font-semibold mb-8">All Projects</h2>
+          <BentoGrid projects={projects} onProjectClick={setSelectedProject} />
+        </section>
+
+        <section className="mt-20">
+          <h2 className="text-2xl font-semibold mb-8">Journey Timeline</h2>
+          <ProjectTimeline
+            events={timelineEvents}
+            onEventClick={handleTimelineEventClick}
+          />
+        </section>
+
+        <ProjectDialog
+          project={selectedProject}
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      </div>
     </main>
   );
 }

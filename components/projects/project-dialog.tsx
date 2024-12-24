@@ -6,7 +6,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,15 +31,13 @@ export function ProjectDialog({
         <ScrollContainer className="h-full">
           <DialogHeader>
             <DialogTitle>{project.title}</DialogTitle>
-            <DialogDescription>
-              <div className="mt-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-lg"
-                />
-              </div>
-            </DialogDescription>
+            <div className="mt-4">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            </div>
           </DialogHeader>
 
           <div className="space-y-4">
