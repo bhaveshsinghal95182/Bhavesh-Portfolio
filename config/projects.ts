@@ -2,6 +2,66 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: "X-Boost",
+    title: "X-Boost",
+    description: "An AI powered X automation tool",
+    longDescription: `
+      A hackathon app that lets u automate X posts using AI:
+      • Real-time meme collection
+      • Automates 16 X posts per day
+      • Uses AI to generate memes and posts
+      • Affordable and easy to use
+      • Marketing at your fingertips
+    `,
+    technologies: ["Next.js", "TailwindCSS", "Node.js", "GeminiAPI", "vercel"],
+    image: "./x-boost.png",
+    githubUrl: "https://github.com/Akshitzz/XBoost",
+    size: "large",
+  },
+  {
+    id: "viusal-teacher",
+    title: "An AI Visual Teacher",
+    description:
+    "A visual teacher which takes question in image/text in real time and gives answer in text/audio",
+    longDescription: `
+    An app that uses gemini api to take in questions in image/text and gives answer in text/audio:
+    • Contextual understanding of the question
+    • Question in image/text
+      • Response in text/audio
+      • Real time video input
+      • Markdown Answer support
+    `,
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "GeminiAPI",
+      "TailwindCSS",
+      "vercel",
+      "BrowserAPI",
+    ],
+    image: "./visual-teacher.png",
+    githubUrl: "https://github.com/bhaveshsinghal95182/ai-visual-teacher.git",
+    liveUrl: "https://ai-visual-teacher.vercel.app/",
+    size: "small",
+  },
+  {
+    id: "Prompt-Archive",
+    title: "Prompt-Archive",
+    description: "A project to make it easy to find writing prompts",
+    longDescription: `
+      Features:
+      • Search Prompts: Find prompts by tags (e.g., fitness, creative) or by content keywords.
+      • Write Your Own Prompts: Add custom prompts directly from the app.
+      • Import/Export Prompts: Save your prompts in a JSON file for easy backup and sharing. Import JSON files to restore or share your collection.
+      • Multi-Model Support: Prompts tailored for ChatGPT, Claude, Gemini, and Llama.
+    `,
+    technologies: ["React.js", "Vite", "TailwindCSS", "vercel"],
+    image: "./Prompt-Archive.png",
+    githubUrl: "https://github.com/bhaveshsinghal95182/Prompt-Archive.git",
+    size: "small",
+    liveUrl: "https://prompt-archive.vercel.app/",
+  },
+  {
     id: "JARVIS",
     title: "JARVIS",
     description: "A python AI application running on streamlit",
@@ -21,24 +81,7 @@ export const projects: Project[] = [
     ],
     image: "./jarvis.jpg",
     githubUrl: "https://github.com/bhaveshsinghal95182/jarvis.git",
-    size: "large",
-  },
-  {
-    id: "Prompt-Archive",
-    title: "Prompt-Archive",
-    description: "A project to make it easy to find writing prompts",
-    longDescription: `
-      Features:
-      • Search Prompts: Find prompts by tags (e.g., fitness, creative) or by content keywords.
-      • Write Your Own Prompts: Add custom prompts directly from the app.
-      • Import/Export Prompts: Save your prompts in a JSON file for easy backup and sharing. Import JSON files to restore or share your collection.
-      • Multi-Model Support: Prompts tailored for ChatGPT, Claude, Gemini, and Llama.
-    `,
-    technologies: ["React.js", "Vite","TailwindCSS", "vercel"],
-    image: "./Prompt-Archive.png",
-    githubUrl: "https://github.com/bhaveshsinghal95182/Prompt-Archive.git",
     size: "small",
-    liveUrl: "https://prompt-archive.vercel.app/",
   },
   {
     id: "Sticky-Notes",
