@@ -77,12 +77,7 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body className={`${inter.className} dark`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          forcedTheme="dark"
-        >
+        <ThemeProvider>
           {children}
         </ThemeProvider>
       </body>
