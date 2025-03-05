@@ -9,10 +9,12 @@ import {
   Mail,
   Phone,
   MapPin,
-  Github,
   Linkedin,
   Code,
   Terminal,
+  Github,
+  Instagram,
+  Coffee
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { socialLinks } from "@/config/social-links";
@@ -70,34 +72,54 @@ const ContactSection = () => {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Follow Me</h3>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" asChild>
-                  <a
-                    href={socialLinks.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-all hover:scale-110"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <a
-                    href={socialLinks.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-all hover:scale-110"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <a
-                    href={`mailto:${socialLinks.email}`}
-                    className="transition-all hover:scale-110"
-                  >
-                    <Mail className="h-5 w-5" />
-                  </a>
-                </Button>
+              <Button variant="outline" size="icon" asChild >
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#0077B5] hover:bg-[#0077B5]/90">
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#D44638] hover:bg-[#D44638]/90">
+              <a
+                href={`mailto:${socialLinks.email}`}
+                className="transition-all hover:scale-110"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#E4405F] hover:bg-[#E4405F]/90">
+              <a
+                href="https://www.instagram.com/descentkatil_00005/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#FFDD00] hover:bg-[#FFDD00]/90">
+              <a
+                href="https://buymeacoffee.com/descentkatil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Coffee className="h-5 w-5 text-black" />
+              </a>
+            </Button>
               </div>
             </div>
           </div>

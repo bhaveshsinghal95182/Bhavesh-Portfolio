@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Coffee, Instagram } from "lucide-react";
 import { TypewriterText } from "./typewriter-text";
 import { StackHighlight } from "./stack-highlight";
 import { useScrollTo } from "@/hooks/use-scroll-to";
@@ -32,7 +32,7 @@ const HeroSection = () => {
             <TypewriterText />
           </p>
           <div className="flex gap-4">
-            <Button variant="outline" size="icon" asChild>
+            <Button variant="outline" size="icon" asChild >
               <a
                 href={socialLinks.github}
                 target="_blank"
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 <Github className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="icon" asChild>
+            <Button variant="outline" size="icon" asChild className="bg-[#0077B5] hover:bg-[#0077B5]/90">
               <a
                 href={socialLinks.linkedin}
                 target="_blank"
@@ -52,12 +52,32 @@ const HeroSection = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="icon" asChild>
+            <Button variant="outline" size="icon" asChild className="bg-[#D44638] hover:bg-[#D44638]/90">
               <a
                 href={`mailto:${socialLinks.email}`}
                 className="transition-all hover:scale-110"
               >
                 <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#E4405F] hover:bg-[#E4405F]/90">
+              <a
+                href="https://www.instagram.com/descentkatil_00005/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild className="bg-[#FFDD00] hover:bg-[#FFDD00]/90">
+              <a
+                href="https://buymeacoffee.com/descentkatil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all hover:scale-110"
+              >
+                <Coffee className="h-5 w-5 text-black" />
               </a>
             </Button>
           </div>
