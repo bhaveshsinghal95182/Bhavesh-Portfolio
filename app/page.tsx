@@ -13,7 +13,7 @@ export default function Home() {
       <ThunderText 
         text="BHAVESH SINGHAL " 
         fontSize={120}
-        fontFamily='TurboType'
+        fontFamily='GodOfThunder'
         textColor="#FFA500"
         thunderColor="#FFD700"
         thunderGlow="#FFD700"
