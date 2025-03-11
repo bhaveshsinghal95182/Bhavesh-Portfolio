@@ -1,5 +1,3 @@
-'use client'
-
 import NavHeader from '@/components/nav-header';
 import HeroSection from '@/components/hero-section';
 import ProjectsSection from '@/components/projects/projects-section';
